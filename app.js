@@ -49,7 +49,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
       //maxAge = ms - s - m - h - d
-    cookie: { secure: false, maxAge: 1000 * 60 * 60 * 1 * 1 }
+    cookie: { secure: true, maxAge: 1000 * 60 * 60 * 1 * 1 }
   }));
 
   app.use(flash());

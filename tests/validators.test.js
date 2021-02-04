@@ -117,17 +117,17 @@ describe('Above maximum input for password field', () => {
   });
 });
 
-describe('Above maximum input for password field', () => {
-  it('When the password field input is above maximum, then the "Password must be less than " + PASSWORD_MAX + " characters long." error message is sent', async () => {
+describe('Password does not match', () => {
+  it('When the password field input does not match the password2 field, then the "Passwords must match." error message is sent', async () => {
     // Arrange
     //256 Characters
-    var password = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    var password2 = "notmatch";
     var req = httpMocks.createRequest({body: { email, username, password, password2, displayname, street, city_province, contactno }});
     var res = httpMocks.createResponse();
     // Act
     await testExpressValidatorMiddleware(req, res, registerCustomerValidation);
     const result = validationResult(req);
     // Assert
-    expect(result.errors[0].msg).toEqual("Password must be less than " + PASSWORD_MAX + " characters long.");
+    expect(result.errors[0].msg).toEqual("Passwords must match.");
   });
 });
