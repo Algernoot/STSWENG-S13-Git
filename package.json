@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonstaana/STSWENG-S13-Git.git"
+    "url": "git+https://github.com/Algernoot/STSWENG-S13-Git.git"
   },
   "author": "",
   "license": "ISC",
@@ -43,7 +43,7 @@
     "node": "12.x"
   },
   "bugs": {
-    "url": "https://github.com/antonstaana/STSWENG-S13-Git/issues"
+    "url": "https://github.com/Algernoot/STSWENG-S13-Git/issues"
   },
-  "homepage": "https://github.com/antonstaana/STSWENG-S13-Git#readme"
+  "homepage": "https://github.com/Algernoot/STSWENG-S13-Git#readme"
 }
