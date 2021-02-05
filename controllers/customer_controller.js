@@ -59,3 +59,7 @@ exports.update_profile = function(req, res){
        return res.send({status:200});
    });
 }
+
+exports.edit_profile = function(req,res){
+  res.redirect("/customer/profile")
+}
